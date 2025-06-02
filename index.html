@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>诺奖的全球版图</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Orbitron', sans-serif;
+        }
+        svg {
+            display: block;
+        }
+        .globe {
+            fill: #1a1a1a;
+            stroke: #333;
+            stroke-width: 0.5;
+        }
+        .country {
+            fill: #333;
+            stroke: #555;
+            stroke-width: 0.2;
+            cursor: pointer;
+        }
+        .country:hover {
+            fill: #444;
+        }
+        .point {
+            fill: #ffcc00;
+            stroke: none;
+        }
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffcc00;
+            padding: 8px 12px;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            pointer-events: none;
+            font-size: 12px;
+            text-shadow: 0 0 3px rgba(255, 204, 0, 0.5);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border: 2px solid #ffcc00;
+            border-radius: 8px;
+            color: #ffcc00;
+            display: flex;
+            gap: 20px;
+        }
+        .controls label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            text-shadow: 0 0 3px rgba(255, 204, 0, 0.5);
+            cursor: pointer;
+        }
+        .controls input[type="checkbox"] {
+            appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ffcc00;
+            border-radius: 4px;
+            margin-right: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .controls input[type="checkbox"]:checked {
+            background: #ffcc00;
+            box-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+        }
+        .controls input[type="checkbox"]:hover {
+            border-color: #ffe066;
+            box-shadow: 0 0 5px rgba(255, 224, 102, 0.5);
+        }
+        .bar-chart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: #1a1a1a;
+            border-left: 2px solid #ffffff;
+            z-index: 2000;
+            color: #ffffff;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            transition: right 0.5s cubic-bezier(.77,0,.18,1);
+            font-family: 'Times New Roman', '微软雅黑', 'Microsoft YaHei', Times, serif;
+        }
+        .bar-chart-sidebar.open {
+            right: 0;
+        }
+        .bar-chart-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px 24px 10px 24px;
+            border-bottom: 1px solid #ffffff;
+        }
+        #bar-chart-title {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Microsoft YaHei', 'Heiti SC', '黑体', Arial, sans-serif;
+            max-width: 300px;
+            white-space: normal;
+            line-height: 1.2;
+            padding-right: 40px;
+        }
+        #close-bar-chart {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 28px;
+            font-family: 'Times New Roman', '微软雅黑', 'Microsoft YaHei', Times, serif;
+            cursor: pointer;
+            transition: color 0.2s;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        #close-bar-chart:hover {
+            color: #cccccc;
+        }
+        #bar-chart-svg {
+            margin: 20px 24px 0 24px;
+            display: block;
+            background: none;
+        }
+        .bar-chart-svg .axis text {
+            font-family: 'Times New Roman', '微软雅黑', 'Microsoft YaHei', Times, serif;
+            font-size: 16px;
+        }
+        .bar-chart-svg .bar-text {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .corner-menu {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 9999;
+            font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+            user-select: none;
+        }
+        .corner-menu-toggle {
+            width: 38px;
+            height: 38px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffcc00;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+        }
+        .corner-menu-toggle:hover {
+            background: rgba(0,0,0,0.9);
+        }
+        .corner-menu-list {
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px) scale(0.98);
+            transition: opacity 0.35s cubic-bezier(.4,2,.6,1), transform 0.35s cubic-bezier(.4,2,.6,1);
+            margin-top: 10px;
+            background: rgba(0,0,0,0.85);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            padding: 6px 10px;
+            min-width: 120px;
+        }
+        .corner-menu:hover .corner-menu-list,
+        .corner-menu:focus-within .corner-menu-list {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+        }
+        .corner-menu-list a {
+            color: #ffcc00;
+            font-size: 15px;
+            font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+            text-decoration: none;
+            margin: 6px 0;
+            transition: color 0.2s, background 0.2s, transform 0.2s;
+            border-radius: 6px;
+            padding: 4px 8px;
+            display: block;
+            transform: scale(1);
+        }
+        .corner-menu-list a:hover {
+            background: rgba(255, 204, 0, 0.13);
+            color: #fff;
+            transform: scale(1.08);
+            box-shadow: 0 2px 8px rgba(255,204,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <label><input type="checkbox" id="chemistry" checked> 化学</label>
+        <label><input type="checkbox" id="physics" checked> 物理学</label>
+        <label><input type="checkbox" id="medicine" checked> 医学</label>
+    </div>
+    <div class="tooltip" style="display: none;"></div>
+    <div class="bar-chart-sidebar">
+        <div class="bar-chart-header">
+            <span id="bar-chart-title"></span>
+            <button id="close-bar-chart">×</button>
+        </div>
+        <svg id="bar-chart-svg" width="352" height="400" class="bar-chart-svg"></svg>
+    </div>
+    <!-- 页面切换菜单 -->
+    <div class="corner-menu">
+        <div class="corner-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="corner-menu-list">
+            <a href="index.html">诺奖的全球版图</a>
+            <a href="scientist.html">科学家的成就之路</a>
+            <a href="KeywordCloud.html">科学的关键词脉络</a>
+            <a href="colabration.html">诺奖协作网络</a>
+            <a href="NobelIntegers.html">诺奖的多元格局</a>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // SVG设置
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // 正交投影
+        const projection = d3.geoOrthographic()
+            .scale(250)
+            .translate([width / 2, height / 2])
+            .clipAngle(90);
+
+        const path = d3.geoPath().projection(projection);
+
+        // 全局变量
+        let sensitivity = 75;
+        let scaleExtent = [100, 1000];
+        let timer = null;
+        let isRotating = true;
+        let points = null;
+        let pulseActive = true;
+        let radiusScale = null;
+        let pulseTimer = null;
+        let allData = [];
+        let selectedFields = ['chemistry', 'physics', 'medicine'];
+
+        // 国家名称映射
+        const countryMap = {
+            "United States of America": "United States",
+            "United Kingdom of Great Britain and Northern Ireland": "United Kingdom",
+            "Russian Federation": "Russia",
+            "Bosnia and Herzegovina": "Bosnia and Herzegovina",
+            "Taiwan": "Taiwan",
+            "Singapore": "Singapore",
+            "Switzerland": "Switzerland",
+            "Belgium": "Belgium",
+            "Israel": "Israel",
+            "Ireland": "Ireland",
+            "Argentina": "Argentina",
+            "Germany": "Germany",
+            "France": "France",
+            "Japan": "Japan",
+            "Canada": "Canada",
+            "Australia": "Australia",
+            "India": "India",
+            "Poland": "Poland",
+            "South Africa": "South Africa",
+            "The Gambia": "The Gambia",
+            "Tanzania": "Tanzania",
+            "Malaysia": "Malaysia",
+            "Norway": "Norway",
+            "Denmark": "Denmark",
+            "Sweden": "Sweden",
+            "Italy": "Italy",
+            "Netherlands": "Netherlands",
+            "Slovakia": "Slovakia",
+            "Bhutan": "Bhutan"
+        };
+
+        // 重绘函数
+        function redraw() {
+            svg.selectAll(".globe").attr("r", projection.scale());
+            svg.selectAll("path").attr("d", path);
+
+            if (points) {
+                const center = projection.invert([width / 2, height / 2]);
+                points.each(function(d) {
+                    const point = d3.select(this);
+                    const distance = d3.geoDistance([d.longitude, d.latitude], center);
+                    if (distance > Math.PI / 2) {
+                        point.attr("transform", "translate(-100,-100)");
+                    } else {
+                        const p = projection([d.longitude, d.latitude]);
+                        point.attr("transform", p ? `translate(${p[0]},${p[1]})` : "translate(-100,-100)");
+                    }
+                });
+            }
+        }
+
+        // 光点脉冲动画
+        function pulse() {
+            if (pulseActive && points && radiusScale) {
+                points.filter(d => d.totalTimes >= 3).transition()
+                    .duration(2000)
+                    .ease(d3.easeSinInOut)
+                    .attr("r", d => radiusScale(d.totalTimes) * 1.5)
+                    .transition()
+                    .duration(2000)
+                    .ease(d3.easeSinInOut)
+                    .attr("r", d => radiusScale(d.totalTimes));
+            }
+        }
+
+        // 启动动画循环
+        function startPulse() {
+            if (pulseTimer) clearInterval(pulseTimer);
+            pulseTimer = setInterval(() => {
+                if (pulseActive && points && radiusScale) {
+                    pulse();
+                }
+            }, 4000);
+            pulse();
+        }
+
+        // 停止动画
+        function stopPulse() {
+            if (pulseTimer) clearInterval(pulseTimer);
+            pulseTimer = null;
+            if (points) points.interrupt();
+        }
+
+        // 更新光点数据
+        function updatePoints() {
+            const filteredData = selectedFields.length > 0 
+                ? allData.filter(d => selectedFields.includes(d.field.toLowerCase()))
+                : [];
+
+            const groupedData = d3.group(filteredData, d => d.Affiliation);
+            const aggregatedData = Array.from(groupedData, ([affiliation, entries]) => {
+                const totalTimes = d3.sum(entries, d => d.times);
+                const fieldTimes = {};
+                entries.forEach(d => {
+                    fieldTimes[d.field] = d.times;
+                });
+                return {
+                    Affiliation: affiliation,
+                    totalTimes: totalTimes,
+                    fieldTimes: fieldTimes,
+                    latitude: entries[0].latitude,
+                    longitude: entries[0].longitude,
+                    country: entries[0].country
+                };
+            });
+
+            radiusScale = d3.scaleSqrt()
+                .domain([1, d3.max(aggregatedData, d => d.totalTimes) || 1])
+                .range([2, 10]);
+
+            svg.selectAll(".point").remove();
+
+            points = svg.append("g")
+                .selectAll("circle")
+                .data(aggregatedData)
+                .enter()
+                .append("circle")
+                .attr("class", "point")
+                .attr("r", d => radiusScale(d.totalTimes))
+                .attr("opacity", 0.7)
+                .attr("filter", "url(#glow)")
+                .on("mouseover", function(event, d) {
+                    const fieldStats = selectedFields
+                        .filter(field => d.fieldTimes[field])
+                        .map(field => `<span style="font-size:20px;">${field}: ${d.fieldTimes[field]} 篇</span>`)
+                        .join("<br>");
+                    const tooltipText = fieldStats 
+                        ? `<span style="font-size:22px;font-family:'Microsoft YaHei', 'Heiti SC', '黑体', Arial, sans-serif; font-weight:bold;">${d.Affiliation} (${d.country})</span><br>${fieldStats.replace(/font-size:18px/g, 'font-size:20px')}`
+                        : `<span style="font-size:22px;font-family:'Microsoft YaHei', 'Heiti SC', '黑体', Arial, sans-serif; font-weight:bold;">${d.Affiliation} (${d.country})</span><br><span style='font-size:20px;'>无选中领域论文</span>`;
+                    d3.select(".tooltip")
+                        .style("display", "block")
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 10) + "px")
+                        .html(tooltipText);
+                })
+                .on("mouseout", function() {
+                    d3.select(".tooltip").style("display", "none");
+                })
+                .on("click", function(event, d) {
+                    d3.select(".tooltip").style("display", "none");
+                    const fields = ["chemistry", "physics", "medicine"];
+                    const fieldNames = {"chemistry": "化学", "physics": "物理学", "medicine": "医学"};
+                    const data = fields.map(field => ({
+                        field: fieldNames[field],
+                        value: d.fieldTimes[field] || 0
+                    }));
+                    d3.select("#bar-chart-title").text(`${d.Affiliation} (${d.country})：${d.totalTimes} 篇`);
+                    const svg = d3.select("#bar-chart-svg");
+                    svg.selectAll("*").remove();
+                    const margin = {top: 20, right: 20, bottom: 40, left: 40};
+                    const width = +svg.attr("width") - margin.left - margin.right;
+                    const height = +svg.attr("height") - margin.top - margin.bottom;
+                    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+                    const x = d3.scaleBand()
+                        .domain(data.map(d => d.field))
+                        .range([0, width])
+                        .padding(0.4);
+                    const y = d3.scaleLinear()
+                        .domain([0, d3.max(data, d => d.value) || 1])
+                        .range([height, 0]);
+                    g.append("g")
+                        .attr("transform", `translate(0,${height})`)
+                        .attr("class", "axis")
+                        .call(d3.axisBottom(x))
+                        .selectAll("text")
+                        .style("fill", "#ffffff");
+                    g.append("g")
+                        .attr("class", "axis")
+                        .call(d3.axisLeft(y).tickValues(d3.range(0, d3.max(data, d => d.value) + 1, Math.ceil(d3.max(data, d => d.value) / 4))).tickFormat(d3.format("d")))
+                        .selectAll("text")
+                        .style("fill", "#ffffff");
+                    g.selectAll("rect")
+                        .data(data)
+                        .enter()
+                        .append("rect")
+                        .attr("x", d => x(d.field))
+                        .attr("y", height)
+                        .attr("width", x.bandwidth())
+                        .attr("height", 0)
+                        .attr("fill", "#ffffff")
+                        .transition()
+                        .duration(500)
+                        .ease(d3.easeCubicOut)
+                        .attr("y", d => y(d.value))
+                        .attr("height", d => height - y(d.value));
+                    g.selectAll("text.bar")
+                        .data(data)
+                        .enter()
+                        .append("text")
+                        .attr("class", "bar-text")
+                        .attr("x", d => x(d.field) + x.bandwidth()/2)
+                        .attr("y", height)
+                        .attr("text-anchor", "middle")
+                        .attr("fill", "#ffffff")
+                        .text(d => d.value)
+                        .transition()
+                        .duration(500)
+                        .ease(d3.easeCubicOut)
+                        .attr("y", d => y(d.value) - 10);
+                    d3.select(".bar-chart-sidebar").classed("open", true);
+                });
+
+            redraw();
+
+            if (pulseActive && aggregatedData.length > 0) {
+                startPulse();
+            }
+        }
+
+        // 拖动和缩放
+        const drag = d3.drag()
+            .on("start", function() {
+                if (timer) {
+                    timer.stop();
+                    timer = null;
+                }
+                if (pulseActive && points) {
+                    stopPulse();
+                    pulseActive = false;
+                }
+            })
+            .on("drag", function(event) {
+                const rotate = projection.rotate();
+                let k = sensitivity / projection.scale();
+                rotate[0] += event.dx * k;
+                rotate[1] -= event.dy * k;
+                projection.rotate(rotate);
+                redraw();
+            })
+            .on("end", function() {
+                if (isRotating && !timer) {
+                    timer = d3.timer(function(elapsed) {
+                        const rotate = projection.rotate();
+                        rotate[0] += 0.2;
+                        projection.rotate(rotate);
+                        redraw();
+                    });
+                }
+                if (!pulseActive && points) {
+                    pulseActive = true;
+                    startPulse();
+                }
+            });
+
+        const zoom = d3.zoom()
+            .scaleExtent(scaleExtent)
+            .on("zoom", function(event) {
+                projection.scale(event.transform.k);
+                redraw();
+            });
+
+        svg.call(drag).call(zoom);
+
+        // SVG滤镜
+        const defs = svg.append("defs");
+        const filter = defs.append("filter")
+            .attr("id", "glow")
+            .attr("x", "-50%")
+            .attr("y", "-50%")
+            .attr("width", "200%")
+            .attr("height", "200%");
+        filter.append("feGaussianBlur")
+            .attr("stdDeviation", 2.5)
+            .attr("result", "coloredBlur");
+        const feMerge = filter.append("feMerge");
+        feMerge.append("feMergeNode").attr("in", "coloredBlur");
+        feMerge.append("feMergeNode").attr("in", "SourceGraphic");
+
+        // 加载数据
+        Promise.all([
+            d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json"),
+            d3.json("data/institution_field_data.json")
+        ]).then(([world, institutions]) => {
+            const countries = topojson.feature(world, world.objects.countries);
+
+            // 绘制地球和国家
+            svg.append("circle")
+                .attr("class", "globe")
+                .attr("cx", width / 2)
+                .attr("cy", height / 2)
+                .attr("r", projection.scale());
+
+            svg.append("g")
+                .selectAll("path")
+                .data(countries.features)
+                .enter()
+                .append("path")
+                .attr("class", "country")
+                .attr("d", path)
+                .on("click", function(event, d) {
+                    d3.select(".bar-chart-sidebar").classed("open", false);
+                    const countryName = countryMap[d.properties.name] || d.properties.name;
+                    const countryData = allData.filter(record => record.country.toLowerCase() === countryName.toLowerCase());
+                    if (countryData.length === 0) {
+                        return;
+                    }
+                    const totalTimes = d3.sum(countryData, d => d.times);
+                    const fieldTimes = {
+                        chemistry: d3.sum(countryData.filter(d => d.field === 'chemistry'), d => d.times),
+                        physics: d3.sum(countryData.filter(d => d.field === 'physics'), d => d.times),
+                        medicine: d3.sum(countryData.filter(d => d.field === 'medicine'), d => d.times)
+                    };
+                    const fields = ["chemistry", "physics", "medicine"];
+                    const fieldNames = {"chemistry": "化学", "physics": "物理学", "medicine": "医学"};
+                    const data = fields.map(field => ({
+                        field: fieldNames[field],
+                        value: fieldTimes[field] || 0
+                    }));
+                    d3.select("#bar-chart-title").text(`${countryName}：${totalTimes} 篇`);
+                    const svg = d3.select("#bar-chart-svg");
+                    svg.selectAll("*").remove();
+                    const margin = {top: 20, right: 20, bottom: 40, left: 40};
+                    const width = +svg.attr("width") - margin.left - margin.right;
+                    const height = +svg.attr("height") - margin.top - margin.bottom;
+                    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+                    const x = d3.scaleBand()
+                        .domain(data.map(d => d.field))
+                        .range([0, width])
+                        .padding(0.4);
+                    const y = d3.scaleLinear()
+                        .domain([0, d3.max(data, d => d.value) || 1])
+                        .range([height, 0]);
+                    g.append("g")
+                        .attr("transform", `translate(0,${height})`)
+                        .attr("class", "axis")
+                        .call(d3.axisBottom(x))
+                        .selectAll("text")
+                        .style("fill", "#ffffff");
+                    g.append("g")
+                        .attr("class", "axis")
+                        .call(d3.axisLeft(y).tickFormat(d3.format("d")))
+                        .selectAll("text")
+                        .style("fill", "#ffffff");
+                    g.selectAll("rect")
+                        .data(data)
+                        .enter()
+                        .append("rect")
+                        .attr("x", d => x(d.field))
+                        .attr("y", height)
+                        .attr("width", x.bandwidth())
+                        .attr("height", 0)
+                        .attr("fill", "#ffffff")
+                        .transition()
+                        .duration(500)
+                        .ease(d3.easeCubicOut)
+                        .attr("y", d => y(d.value))
+                        .attr("height", d => height - y(d.value));
+                    g.selectAll("text.bar")
+                        .data(data)
+                        .enter()
+                        .append("text")
+                        .attr("class", "bar-text")
+                        .attr("x", d => x(d.field) + x.bandwidth()/2)
+                        .attr("y", height)
+                        .attr("text-anchor", "middle")
+                        .attr("fill", "#ffffff")
+                        .text(d => d.value)
+                        .transition()
+                        .duration(500)
+                        .ease(d3.easeCubicOut)
+                        .attr("y", d => y(d.value) - 10);
+                    d3.select(".bar-chart-sidebar").classed("open", true);
+                });
+
+            // 存储数据
+            allData = institutions;
+
+            // 初始绘制光点
+            updatePoints();
+
+            // 自动旋转
+            timer = d3.timer(function(elapsed) {
+                const rotate = projection.rotate();
+                rotate[0] += 0.2;
+                projection.rotate(rotate);
+                redraw();
+            });
+
+            // 点击停止旋转
+            svg.on("click", () => {
+                if (timer) {
+                    timer.stop();
+                    timer = null;
+                    isRotating = false;
+                }
+            });
+
+            // 双击切换旋转
+            svg.on("dblclick", () => {
+                if (isRotating) {
+                    if (timer) {
+                        timer.stop();
+                        timer = null;
+                    }
+                    isRotating = false;
+                } else {
+                    if (!timer) {
+                        timer = d3.timer(function(elapsed) {
+                            const rotate = projection.rotate();
+                            rotate[0] += 0.2;
+                            projection.rotate(rotate);
+                            redraw();
+                        });
+                    }
+                    isRotating = true;
+                }
+            });
+
+            // 空格键切换旋转
+            d3.select(window).on("keydown", function(event) {
+                if (event.key === " ") {
+                    event.preventDefault();
+                    if (isRotating) {
+                        if (timer) {
+                            timer.stop();
+                            timer = null;
+                        }
+                        isRotating = false;
+                    } else {
+                        if (!timer) {
+                            timer = d3.timer(function(elapsed) {
+                                const rotate = projection.rotate();
+                                rotate[0] += 0.2;
+                                projection.rotate(rotate);
+                                redraw();
+                            });
+                        }
+                        isRotating = true;
+                    }
+                }
+            });
+
+            // 领域选择事件
+            d3.selectAll("#chemistry, #physics, #medicine").on("change", function() {
+                selectedFields = [];
+                if (d3.select("#chemistry").property("checked")) selectedFields.push("chemistry");
+                if (d3.select("#physics").property("checked")) selectedFields.push("physics");
+                if (d3.select("#medicine").property("checked")) selectedFields.push("medicine");
+                updatePoints();
+            });
+        }).catch(error => {
+            console.error("数据加载失败:", error);
+        });
+
+        // 关闭柱状图侧边栏
+        d3.select("#close-bar-chart").on("click", function() {
+            d3.select(".bar-chart-sidebar").classed("open", false);
+        });
+        document.addEventListener("mousedown", function(event) {
+            const sidebar = document.querySelector('.bar-chart-sidebar');
+            if (sidebar.classList.contains('open') && !sidebar.contains(event.target)) {
+                d3.select(".bar-chart-sidebar").classed("open", false);
+            }
+        });
+    </script>
+</body>
+</html>
