@@ -1,0 +1,163 @@
+LaureateID,LaureateName,LaureateName0,prize_year,prize_pubyear,first_pub_year,award_gap,study_year,photo_link
+20163,"rutherford, e",Ernest Rutherford,1908,1902,1902,6,6,https://www.nobelprize.org/images/rutherford-12860-portrait-small.jpg
+20162,victor grignard,Victor Grignard,1912,1900,1900,12,12,https://www.nobelprize.org/images/grignard-12885-portrait-small.jpg
+20161,"richards, t",Theodore W. Richards,1914,1903,1892,11,22,https://www.nobelprize.org/images/richards-12896-portrait-small.jpg
+20160,"willstatter, r",Richard Willstätter,1915,1913,1913,2,2,https://www.nobelprize.org/images/willstatter-12899-portrait-small.jpg
+20159,"haber, f",Fritz Haber,1918,1913,1908,5,10,https://www.nobelprize.org/images/haber-12908-portrait-small.jpg
+20158,"nernst, w",Walther Nernst,1920,1911,1911,9,9,https://www.nobelprize.org/images/nernst-12914-portrait-small.jpg
+20157,"soddy, f",Frederick Soddy,1921,1915,1902,6,19,https://www.nobelprize.org/images/soddy-12919-portrait-small.jpg
+20156,"aston, f",Francis W. Aston,1922,1919,1919,3,3,https://www.nobelprize.org/images/aston-12924-portrait-small.jpg
+20155,fritz pregl,Fritz Pregl,1923,1905,1899,18,24,https://www.nobelprize.org/images/pregl-12930-portrait-small.jpg
+20154,"zsigmondy, r",Richard Zsigmondy,1925,1902,1902,23,23,https://www.nobelprize.org/images/zsigmondy-12938-portrait-small.jpg
+20153,"svedberg, t",The Svedberg,1926,1924,1923,2,3,https://www.nobelprize.org/images/svedberg-12944-portrait-small.jpg
+20152,"wieland, h",Heinrich Wieland,1927,1922,1922,5,5,https://www.nobelprize.org/images/wieland-12950-portrait-small.jpg
+20151,"windaus, a",Adolf Windaus,1928,1924,1924,4,4,https://www.nobelprize.org/images/windaus-12957-portrait-small.jpg
+20149,"harden, a",Arthur Harden,1929,1906,1902,23,27,https://www.nobelprize.org/images/harden-12962-portrait-small.jpg
+20150,"von euler, h",Hans von Euler-Chelpin,1929,1926,1926,3,3,https://www.nobelprize.org/images/euler-chelpin-12961-portrait-small.jpg
+20148,"fischer, h",Hans Fischer,1930,1894,1894,36,36,https://www.nobelprize.org/images/fischer-12968-portrait-small.jpg
+20146,carl bosch,Carl Bosch,1931,1913,1913,18,18,https://www.nobelprize.org/images/bosch-12974-portrait-small.jpg
+20145,"langmuir, i",Irving Langmuir,1932,1918,1906,14,26,https://www.nobelprize.org/images/langmuir-12979-portrait-small.jpg
+20144,"urey, h",Harold C. Urey,1934,1932,1923,2,11,https://www.nobelprize.org/images/urey-12989-portrait-small.jpg
+20142,"joliot, f",Frédéric Joliot,1935,1934,1931,1,4,https://www.nobelprize.org/images/joliot-fred-12996-portrait-small.jpg
+20143,"curie, i",Irène Joliot-Curie,1935,1934,1923,1,12,https://www.nobelprize.org/images/joliot-curie-12995-portrait-small.jpg
+20141,"debye, p",Peter Debye,1936,1912,1909,24,27,https://www.nobelprize.org/images/debye-13000-portrait-small.jpg
+20139,"haworth, w",Norman Haworth,1937,1928,1908,9,29,https://www.nobelprize.org/images/haworth-13007-portrait-small.jpg
+20140,"karrer, p",Paul Karrer,1937,1931,1919,6,18,https://www.nobelprize.org/images/karrer-13008-portrait-small.jpg
+20138,"kuhn, r",Richard Kuhn,1938,1933,1921,5,17,https://www.nobelprize.org/images/kuhn-13014-portrait-small.jpg
+20136,"ruzicka, l",Leopold Ruzicka,1939,1923,1919,16,20,https://www.nobelprize.org/images/butenandt-13019-portrait-small.jpg
+20137,"butenandt, a",Adolf Butenandt,1939,1935,1934,4,5,https://www.nobelprize.org/images/ruzicka-13020-portrait-small.jpg
+20135,"hevesy, g",George de Hevesy,1943,1923,1923,20,20,https://www.nobelprize.org/images/hevesy-13024-portrait-small.jpg
+20134,"hahn, o",Otto Hahn,1944,1939,1919,5,25,https://www.nobelprize.org/images/hahn-13028-portrait-small.jpg
+20133,"virtanen, a",Artturi Virtanen,1945,1932,1924,13,21,https://www.nobelprize.org/images/virtanen-13034-portrait-small.jpg
+20130,"stanley, w",Wendell M. Stanley,1946,1936,1934,10,12,https://www.nobelprize.org/images/sumner-13043-portrait-small.jpg
+20131,"northrop, j",John H. Northrop,1946,1929,1916,17,30,https://www.nobelprize.org/images/northrop-13041-portrait-small.jpg
+20132,"sumner, j",James B. Sumner,1946,1926,1924,20,22,https://www.nobelprize.org/images/stanley-13042-portrait-small.jpg
+20129,"robinson, r",Sir Robert Robinson,1947,1917,1907,30,40,https://www.nobelprize.org/images/robinson-13049-portrait-small.jpg
+20128,"tiselius, a",Arne Tiselius,1948,1937,1937,11,11,https://www.nobelprize.org/images/tiselius-13057-portrait-small.jpg
+20127,"giauque, w",William F. Giauque,1949,1933,1923,16,26,https://www.nobelprize.org/images/giauque-13061-portrait-small.jpg
+20125,"alder, k",Kurt Alder,1950,1928,1926,22,24,https://www.nobelprize.org/images/diels-13068-portrait-small.jpg
+20126,"diels, o",Otto Diels,1950,1928,1899,22,51,https://www.nobelprize.org/images/alder-13067-portrait-small.jpg
+20123,"seaborg, g",Glenn T. Seaborg,1951,1946,1936,5,15,https://www.nobelprize.org/images/mcmillan-13075-portrait-small.jpg
+20124,"mcmillan, e",Edwin M. McMillan,1951,1940,1927,11,24,https://www.nobelprize.org/images/seaborg-13076-portrait-small.jpg
+20121,"synge, r",Richard L.M. Synge,1952,1941,1941,11,11,https://www.nobelprize.org/images/martin-13082-portrait-small.jpg
+20122,"martin, a",Archer J.P. Martin,1952,1941,1941,11,11,https://www.nobelprize.org/images/synge-13083-portrait-small.jpg
+20120,"staudinger, h",Hermann Staudinger,1953,1919,1905,34,48,https://www.nobelprize.org/images/staudinger-13089-portrait-small.jpg
+20119,"pauling, l",Linus Pauling,1954,1951,1923,3,31,https://www.nobelprize.org/images/pauling-13095-portrait-small.jpg
+20118,"duvigneaud, v",Vincent du Vigneaud,1955,1953,1953,2,2,https://www.nobelprize.org/images/vigneaud-13103-portrait-small.jpg
+20116,"hinshelwood, c",Sir Cyril Hinshelwood,1956,1934,1930,22,26,https://www.nobelprize.org/images/hinshelwood-13108-portrait-small.jpg
+20117,n. n. semenov,Nikolay Semenov,1956,1935,1935,21,21,https://www.nobelprize.org/images/semenov-13109-portrait-small.jpg
+20115,"todd, a",Lord Todd,1957,1945,1945,12,12,https://www.nobelprize.org/images/todd-13117-portrait-small.jpg
+20114,"sanger, f",Frederick Sanger,1958,1955,1945,3,13,https://www.nobelprize.org/images/sanger-13123-portrait-small.jpg
+20113,"heyrovsky, j",Jaroslav Heyrovsky,1959,2010,1924,35,35,https://www.nobelprize.org/images/heyrovsky-13132-portrait-small.jpg
+20112,"libby, w",Willard F. Libby,1960,1949,1933,11,27,https://www.nobelprize.org/images/libby-13139-portrait-small.jpg
+20111,"calvin, m",Melvin Calvin,1961,1952,1939,9,22,https://www.nobelprize.org/images/calvin-13145-portrait-small.jpg
+20109,"kendrew, j",John C. Kendrew,1962,1958,1948,4,14,https://www.nobelprize.org/images/perutz-13152-portrait-small.jpg
+20110,"perutz, m",Max F. Perutz,1962,1960,1938,2,24,https://www.nobelprize.org/images/kendrew-13151-portrait-small.jpg
+20107,"ziegler, k",Karl Ziegler,1963,1955,1923,8,40,https://www.nobelprize.org/images/ziegler-13160-portrait-small.jpg
+20108,"natta, g",Giulio Natta,1963,1955,1930,8,33,https://www.nobelprize.org/images/natta-13159-portrait-small.jpg
+20106,"hodgkin, d",Dorothy Crowfoot Hodgkin,1964,1956,1950,8,14,https://www.nobelprize.org/images/hodgkin-13170-portrait-small.jpg
+20105,"woodward, r",Robert B. Woodward,1965,1959,1938,6,27,https://www.nobelprize.org/images/woodward-13178-portrait-small.jpg
+20104,"mulliken, r",Robert S. Mulliken,1966,1955,1919,11,47,https://www.nobelprize.org/images/mulliken-13187-portrait-small.jpg
+20101,"norrish, r",Ronald G.W. Norrish,1967,1949,1923,18,44,https://www.nobelprize.org/images/eigen-13192-portrait-small.jpg
+20102,"porter, g",George Porter,1967,1949,1949,18,18,https://www.nobelprize.org/images/norrish-13193-portrait-small.jpg
+20103,"eigen, m",Manfred Eigen,1967,1954,1951,13,16,https://www.nobelprize.org/images/porter-13194-portrait-small.jpg
+20100,"onsager, l",Lars Onsager,1968,1931,1927,37,41,https://www.nobelprize.org/images/onsager-13200-portrait-small.jpg
+20098,"barton, d",Derek Barton,1969,1956,1944,13,25,https://www.nobelprize.org/images/barton-13207-portrait-small.jpg
+20099,"hassel, o",Odd Hassel,1969,1947,1929,22,40,https://www.nobelprize.org/images/hassel-13208-portrait-small.jpg
+20097,"leloir, l",Luis Leloir,1970,1955,1950,15,20,https://www.nobelprize.org/images/leloir-13217-portrait-small.jpg
+20096,"herzberg, g.",Gerhard Herzberg,1971,1956,1927,15,44,https://www.nobelprize.org/images/herzberg-13226-portrait-small.jpg
+20093,"anfinsen, c",Christian Anfinsen,1972,1961,1945,11,27,https://www.nobelprize.org/images/anfinsen-13232-portrait-small.jpg
+20094,"stein, w",William H. Stein,1972,1958,1938,14,34,https://www.nobelprize.org/images/moore-13233-portrait-small.jpg
+20095,"moore, s",Stanford Moore,1972,1958,1940,14,32,https://www.nobelprize.org/images/stein-13234-portrait-small.jpg
+20091,wilkinso.g,Geoffrey Wilkinson,1973,1952,1951,21,22,https://www.nobelprize.org/images/fischer-13243-portrait-small.jpg
+20092,"fischer, e",Ernst Otto Fischer,1973,1952,1952,21,21,https://www.nobelprize.org/images/wilkinson-13244-portrait-small.jpg
+20090,"flory, p",Paul J. Flory,1974,1936,1935,38,39,https://www.nobelprize.org/images/flory-13255-portrait-small.jpg
+20088,"prelog, v",Vladimir Prelog,1975,1960,1929,15,46,https://www.nobelprize.org/images/cornforth-13267-portrait-small.jpg
+20089,cornfort.jw,John Cornforth,1975,1962,1942,13,33,https://www.nobelprize.org/images/prelog-13268-portrait-small.jpg
+20087,"lipscomb, w",William Lipscomb,1976,1961,1942,15,34,https://www.nobelprize.org/images/lipscomb-13279-portrait-small.jpg
+20086,"prigogine, i",Ilya Prigogine,1977,1969,1946,8,31,https://www.nobelprize.org/images/prigogine-13288-portrait-small.jpg
+20085,"mitchell, p",Peter Mitchell,1978,1961,1947,17,31,https://www.nobelprize.org/images/mitchell-13299-portrait-small.jpg
+20083,"wittig, g",Georg Wittig,1979,1953,1924,26,55,https://www.nobelprize.org/images/brown-13310-portrait-small.jpg
+20084,"brown, h",Herbert C. Brown,1979,1958,1938,21,41,https://www.nobelprize.org/images/wittig-13311-portrait-small.jpg
+20080,"gilbert, w",Walter Gilbert,1980,1977,1957,3,23,https://www.nobelprize.org/images/berg-13321-portrait-small.jpg
+20081,"sanger, f",Frederick Sanger,1980,1977,1949,3,31,https://www.nobelprize.org/images/sanger-13123-portrait-small.jpg
+20082,"berg, p",Paul Berg,1980,1977,1953,3,27,https://www.nobelprize.org/images/sanger-13323-portrait-small.jpg
+20078,"fukui, k",Kenichi Fukui,1981,1952,1923,29,58,https://www.nobelprize.org/images/fukui-13332-portrait-small.jpg
+20079,"hoffmann, r",Roald Hoffmann,1981,1963,1958,18,23,https://www.nobelprize.org/images/hoffmann-13333-portrait-small.jpg
+20077,"klug, a",Aaron Klug,1982,1968,1955,14,27,https://www.nobelprize.org/images/klug-13343-portrait-small.jpg
+20076,"taube, h",Henry Taube,1983,1952,1940,31,43,https://www.nobelprize.org/images/taube-13352-portrait-small.jpg
+20075,merrifie.rb,Bruce Merrifield,1984,1963,1954,21,30,https://www.nobelprize.org/images/merrifield-13359-portrait-small.jpg
+20073,"karle, j",Jerome Karle,1985,1956,1945,29,40,https://www.nobelprize.org/images/hauptman-13368-portrait-small.jpg
+20074,"hauptman, h",Herbert A. Hauptman,1985,1956,1950,29,35,https://www.nobelprize.org/images/karle-13369-portrait-small.jpg
+20070,"polanyi, j",John C. Polanyi,1986,1969,1955,17,31,https://www.nobelprize.org/images/herschbach-13376-portrait-small.jpg
+20071,herschba.dr,Dudley R. Herschbach,1986,1969,1956,17,30,https://www.nobelprize.org/images/lee-13377-portrait-small.jpg
+20072,"lee, y",Yuan T. Lee,1986,1972,1965,14,21,https://www.nobelprize.org/images/polanyi-13378-portrait-small.jpg
+20067,"cram, d",Donald J. Cram,1987,1952,1944,35,43,https://www.nobelprize.org/images/cram-13387-portrait-small.jpg
+20068,"lehn, j",Jean-Marie Lehn,1987,1969,1961,18,26,https://www.nobelprize.org/images/lehn-13388-portrait-small.jpg
+20069,"pedersen, c",Charles J. Pedersen,1987,1967,1956,20,31,https://www.nobelprize.org/images/pedersen-13389-portrait-small.jpg
+20064,"deisenhofer, j",Johann Deisenhofer,1988,1984,1975,4,13,https://www.nobelprize.org/images/deisenhofer-13396-portrait-small.jpg
+20065,"huber, r",Robert Huber,1988,1984,1963,4,25,https://www.nobelprize.org/images/huber-13397-portrait-small.jpg
+20066,"michel, h",Hartmut Michel,1988,1982,1976,6,12,https://www.nobelprize.org/images/michel-13398-portrait-small.jpg
+20062,"cech, t",Thomas R. Cech,1989,1982,1973,7,16,https://www.nobelprize.org/images/altman-13409-portrait-small.jpg
+20063,"altman, s",Sidney Altman,1989,1983,1970,6,19,https://www.nobelprize.org/images/cech-13410-portrait-small.jpg
+20061,"corey, e",Elias James Corey,1990,1959,1950,31,40,https://www.nobelprize.org/images/corey-13419-portrait-small.jpg
+20060,"ernst, r",Richard R. Ernst,1991,1976,1965,15,26,https://www.nobelprize.org/images/ernst-13430-portrait-small.jpg
+20059,"marcus, r",Rudolph A. Marcus,1992,1956,1948,36,44,https://www.nobelprize.org/images/marcus-13437-portrait-small.jpg
+20057,"smith, m",Michael Smith,1993,1977,1957,16,36,https://www.nobelprize.org/images/mullis-13444-portrait-small.jpg
+20058,"mullis, k",Kary B. Mullis,1993,1988,1968,5,25,https://www.nobelprize.org/images/smith-13445-portrait-small.jpg
+20056,"olah, g",George A. Olah,1994,1962,1956,32,38,https://www.nobelprize.org/images/olah-13455-portrait-small.jpg
+20053,"molina, m",Mario J. Molina,1995,1974,1974,21,21,https://www.nobelprize.org/images/crutzen-13467-portrait-small.jpg
+20054,"crutzen, p",Paul J. Crutzen,1995,1970,1969,25,26,https://www.nobelprize.org/images/molina-13468-portrait-small.jpg
+20055,"rowland, f",F. Sherwood Rowland,1995,1974,1953,21,42,https://www.nobelprize.org/images/rowland-13469-portrait-small.jpg
+20050,"kroto, h",Sir Harold Kroto,1996,1985,1963,11,33,https://www.nobelprize.org/images/curl-13479-portrait-small.jpg
+20051,"smalley, r",Richard E. Smalley,1996,1985,1950,11,46,https://www.nobelprize.org/images/kroto-13480-portrait-small.jpg
+20052,"curl, r",Robert F. Curl Jr.,1996,1985,1955,11,41,https://www.nobelprize.org/images/smalley-13481-portrait-small.jpg
+20047,"boyer, p",Paul D. Boyer,1997,1954,1944,43,53,https://www.nobelprize.org/images/boyer-13492-portrait-small.jpg
+20048,"walker, j",John E. Walker,1997,1994,1969,3,28,https://www.nobelprize.org/images/walker-13494-portrait-small.jpg
+20049,"skou, j",Jens C. Skou,1997,1957,1957,40,40,https://www.nobelprize.org/images/skou-13493-portrait-small.jpg
+20045,"pople, j",John Pople,1998,1973,1950,25,48,https://www.nobelprize.org/images/kohn-13504-portrait-small.jpg
+20046,"kohn, w",Walter Kohn,1998,1964,1945,34,53,https://www.nobelprize.org/images/pople-13505-portrait-small.jpg
+20044,"zewail, a",Ahmed Zewail,1999,1988,1970,11,29,https://www.nobelprize.org/images/zewail-13516-portrait-small.jpg
+20041,"heeger, a",Alan Heeger,2000,1977,1963,23,37,https://www.nobelprize.org/images/heeger-13522-portrait-small.jpg
+20042,shirakaw.h,Hideki Shirakawa,2000,1977,1971,23,29,https://www.nobelprize.org/images/macdiarmid-13523-portrait-small.jpg
+20043,"macdiarmid, a",Alan MacDiarmid,2000,1977,1953,23,47,https://www.nobelprize.org/images/shirakawa-13524-portrait-small.jpg
+20038,"noyori, r",Ryoji Noyori,2001,1968,1963,33,38,https://www.nobelprize.org/images/knowles-13724-portrait-small.jpg
+20039,"knowles, w",William Knowles,2001,1968,1953,33,48,https://www.nobelprize.org/images/noyori-13725-portrait-small.jpg
+20040,"sharpless, k",Barry Sharpless,2001,1980,1964,21,37,https://www.nobelprize.org/images/sharpless-13726-portrait-small.jpg
+20035,"wuthrich, k",Kurt Wüthrich,2002,1985,1964,17,38,https://www.nobelprize.org/images/fenn-13670-portrait-small.jpg
+20036,"tanaka, k",Koichi Tanaka,2002,1988,1975,14,27,https://www.nobelprize.org/images/tanaka-13671-portrait-small.jpg
+20037,"fenn, j",John B. Fenn,2002,1989,1963,13,39,https://www.nobelprize.org/images/wuthrich-13672-portrait-small.jpg
+20033,"agre, p",Peter Agre,2003,1992,1981,11,22,https://www.nobelprize.org/images/agre-13682-portrait-small.jpg
+20034,"mackinnon, r",Roderick MacKinnon,2003,1998,1986,5,17,https://www.nobelprize.org/images/mackinnon-13887-portrait-small.jpg
+20030,"ciechanover, a",Aaron Ciechanover,2004,1980,1978,24,26,https://www.nobelprize.org/images/ciechanover-13692-portrait-small.jpg
+20031,"hershko, a",Avram Hershko,2004,1980,1961,24,43,https://www.nobelprize.org/images/hershko-13693-portrait-small.jpg
+20032,"rose, i",Irwin Rose,2004,1980,1951,24,53,https://www.nobelprize.org/images/rose-13694-portrait-small.jpg
+20027,"chauvin, y",Yves Chauvin,2005,1971,1967,34,38,https://www.nobelprize.org/images/chauvin-13704-portrait-small.jpg
+20028,"grubbs, r",Robert H. Grubbs,2005,1992,1967,13,38,https://www.nobelprize.org/images/grubbs-13705-portrait-small.jpg
+20029,"schrock, r",Richard R. Schrock,2005,1990,1966,15,39,https://www.nobelprize.org/images/schrock-13706-portrait-small.jpg
+20026,"kornberg, r",Roger D. Kornberg,2006,1974,1965,32,41,https://www.nobelprize.org/images/kornberg-13716-portrait-small.jpg
+20025,"ertl, g",Gerhard Ertl,2007,1974,1965,33,42,https://www.nobelprize.org/images/ertl-15137-portrait-small.jpg
+20022,"chalfie, m",Martin Chalfie,2008,1994,1977,14,31,https://www.nobelprize.org/images/shimomura-13557-portrait-small.jpg
+20023,"tsien, r",Roger Y. Tsien,2008,1997,1978,11,30,https://www.nobelprize.org/images/chalfie-13556-portrait-small.jpg
+20024,shimomur.o,Osamu Shimomura,2008,1962,1957,46,51,https://www.nobelprize.org/images/tsien-13558-portrait-small.jpg
+20019,"ramakrishnan, v",Venkatraman Ramakrishnan,2009,2000,1980,9,29,https://www.nobelprize.org/images/ramakrishnan-15152-portrait-small.jpg
+20020,"steitz, t",Thomas A. Steitz,2009,2000,1965,9,44,https://www.nobelprize.org/images/steitz-15151-portrait-small.jpg
+20021,"yonath, a",Ada E. Yonath,2009,2000,1979,9,30,https://www.nobelprize.org/images/yonath-15150-portrait-small.jpg
+20016,"heck, r",Richard F. Heck,2010,1972,1959,38,51,https://www.nobelprize.org/images/heck-15162-portrait-small.jpg
+20017,"negishi, e",Ei-ichi Negishi,2010,1976,1967,34,43,https://www.nobelprize.org/images/negishi-15161-portrait-small.jpg
+20018,"suzuki, a",Akira Suzuki,2010,1979,1960,31,50,https://www.nobelprize.org/images/suzuki-15160-portrait-small.jpg
+20015,"shechtman, d",Dan Shechtman,2011,1984,1973,27,38,https://www.nobelprize.org/images/shechtman-15174-portrait-small.jpg
+20013,"lefkowitz, r",Robert J. Lefkowitz,2012,1986,1970,26,42,https://www.nobelprize.org/images/lefkowitz-15182-portrait-small.jpg
+20014,"kobilka, b",Brian Kobilka,2012,1986,1986,26,26,https://www.nobelprize.org/images/kobilka-15183-portrait-small.jpg
+20010,"levitt, m",Michael Levitt,2013,1975,1969,38,44,https://www.nobelprize.org/images/karplus-13615-portrait-small.jpg
+20011,"warshel, a",Arieh Warshel,2013,1975,1968,38,45,https://www.nobelprize.org/images/levitt-13616-portrait-small.jpg
+20012,"karplus, m",Martin Karplus,2013,1972,1952,41,61,https://www.nobelprize.org/images/warshel-13617-portrait-small.jpg
+20007,"moerner, w",William E. Moerner,2014,2000,1974,14,40,https://www.nobelprize.org/images/betzig-15197-portrait-small.jpg
+20008,"betzig, e",Eric Betzig,2014,1991,1986,23,28,https://www.nobelprize.org/images/hell-15196-portrait-small.jpg
+20009,"hell, s",Stefan W. Hell,2014,1994,1989,20,25,https://www.nobelprize.org/images/moerner-15195-portrait-small.jpg
+20004,"modrich, p",Paul Modrich,2015,1989,1971,26,44,https://www.nobelprize.org/images/lindahl-13641-portrait-small.jpg
+20005,"lindahl, t",Tomas Lindahl,2015,1974,1962,41,53,https://www.nobelprize.org/images/modrich-13642-portrait-small.jpg
+20006,"sancar, a",Aziz Sancar,2015,1983,1978,32,37,https://www.nobelprize.org/images/sancar-15199-portrait-small.jpg
+20001,"stoddart, j",Sir J. Fraser Stoddart,2016,1991,1965,25,51,https://www.nobelprize.org/images/sauvage-15210-portrait-small.jpg
+20002,"feringa, b",Bernard L. Feringa,2016,1999,1976,17,40,https://www.nobelprize.org/images/stoddart-15208-portrait-small.jpg
+20003,"sauvage, j",Jean-Pierre Sauvage,2016,1983,1969,33,47,https://www.nobelprize.org/images/feringa-15204-portrait-small.jpg
