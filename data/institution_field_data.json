@@ -1,0 +1,1562 @@
+[
+  {
+    "Affiliation": "Academia Sinica",
+    "field": "chemistry",
+    "times": 3,
+    "latitude": 25.0420743,
+    "longitude": 121.614046,
+    "country": "Taiwan"
+  },
+  {
+    "Affiliation": "Agency For Science Technology And Research",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 1.2994,
+    "longitude": 103.7878,
+    "country": "Singapore"
+  },
+  {
+    "Affiliation": "Albert Einstein College Of Medicine",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 40.8542806,
+    "longitude": -73.8456159,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Alcatel Lucent",
+    "field": "physics",
+    "times": 1,
+    "latitude": 51.4899961,
+    "longitude": 0.0070612,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Argonne National Laboratory",
+    "field": "physics",
+    "times": 1,
+    "latitude": 41.7091409,
+    "longitude": -87.9786221,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Australian National University",
+    "field": "physics",
+    "times": 1,
+    "latitude": -35.2812742,
+    "longitude": 149.1172023,
+    "country": "Australia"
+  },
+  {
+    "Affiliation": "Basel Institute For Immunology",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 47.5732,
+    "longitude": 7.6045,
+    "country": "Switzerland"
+  },
+  {
+    "Affiliation": "Bell Labs",
+    "field": "chemistry",
+    "times": 3,
+    "latitude": 51.2139999,
+    "longitude": 4.4230093,
+    "country": "Belgium"
+  },
+  {
+    "Affiliation": "Bell Labs",
+    "field": "physics",
+    "times": 5,
+    "latitude": 51.2139999,
+    "longitude": 4.4230093,
+    "country": "Belgium"
+  },
+  {
+    "Affiliation": "Ben Gurion University Of The Negev",
+    "field": "physics",
+    "times": 2,
+    "latitude": 31.2631254,
+    "longitude": 34.8022385,
+    "country": "Israel"
+  },
+  {
+    "Affiliation": "Birkbeck University Of London",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 51.5218449,
+    "longitude": -0.1302155,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Brookhaven National Laboratory",
+    "field": "physics",
+    "times": 2,
+    "latitude": 40.8745102,
+    "longitude": -72.8667428,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Brown University",
+    "field": "physics",
+    "times": 2,
+    "latitude": 41.8186395,
+    "longitude": -71.4088009,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "California Institute Of Technology",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 34.1370138,
+    "longitude": -118.1252883,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "California Institute Of Technology",
+    "field": "medicine",
+    "times": 4,
+    "latitude": 34.1370138,
+    "longitude": -118.1252883,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "California Institute Of Technology",
+    "field": "physics",
+    "times": 11,
+    "latitude": 34.1370138,
+    "longitude": -118.1252883,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Carnegie Institution For Science",
+    "field": "medicine",
+    "times": 5,
+    "latitude": 38.9051,
+    "longitude": -77.0353,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Carnegie Mellon University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 40.4441897,
+    "longitude": -79.9427192,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Case Western Reserve University",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 41.5013869,
+    "longitude": -81.6007022,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Catholic University Of Leuven",
+    "field": "medicine",
+    "times": 3,
+    "latitude": 50.8779,
+    "longitude": 4.7005,
+    "country": "Belgium"
+  },
+  {
+    "Affiliation": "Centre National De La Recherche Scientifique",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 45.7804582,
+    "longitude": 4.874957,
+    "country": "France"
+  },
+  {
+    "Affiliation": "Centre National De La Recherche Scientifique",
+    "field": "physics",
+    "times": 1,
+    "latitude": 45.7804582,
+    "longitude": 4.874957,
+    "country": "France"
+  },
+  {
+    "Affiliation": "Cern",
+    "field": "physics",
+    "times": 3,
+    "latitude": 46.2333936,
+    "longitude": 6.0556169,
+    "country": "Switzerland"
+  },
+  {
+    "Affiliation": "Cold Spring Harbor Laboratory",
+    "field": "medicine",
+    "times": 3,
+    "latitude": 40.8623522,
+    "longitude": -73.4699926,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "College De France",
+    "field": "medicine",
+    "times": 4,
+    "latitude": 48.8493233,
+    "longitude": 2.3461573,
+    "country": "France"
+  },
+  {
+    "Affiliation": "College De France",
+    "field": "physics",
+    "times": 2,
+    "latitude": 48.8493233,
+    "longitude": 2.3461573,
+    "country": "France"
+  },
+  {
+    "Affiliation": "College Of Science And Technology",
+    "field": "physics",
+    "times": 2,
+    "latitude": 26.8507333,
+    "longitude": 89.3938581,
+    "country": "Bhutan"
+  },
+  {
+    "Affiliation": "Columbia University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 40.8077558,
+    "longitude": -73.9616141,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Columbia University",
+    "field": "medicine",
+    "times": 5,
+    "latitude": 40.8077558,
+    "longitude": -73.9616141,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Columbia University",
+    "field": "physics",
+    "times": 4,
+    "latitude": 40.8077558,
+    "longitude": -73.9616141,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Cornell University",
+    "field": "chemistry",
+    "times": 7,
+    "latitude": 42.4529076,
+    "longitude": -76.4800842,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Cornell University",
+    "field": "physics",
+    "times": 3,
+    "latitude": 42.4529076,
+    "longitude": -76.4800842,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Dublin Institute For Advanced Studies",
+    "field": "physics",
+    "times": 4,
+    "latitude": 53.3312715,
+    "longitude": -6.2458957,
+    "country": "Ireland"
+  },
+  {
+    "Affiliation": "Duke University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 36.0001557,
+    "longitude": -78.9442297,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Duke University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 36.0001557,
+    "longitude": -78.9442297,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Eth Zurich",
+    "field": "chemistry",
+    "times": 3,
+    "latitude": 47.413218,
+    "longitude": 8.5374914,
+    "country": "Switzerland"
+  },
+  {
+    "Affiliation": "Facultad De Ciencias Medicas",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": -32.9399552,
+    "longitude": -60.6649924,
+    "country": "Argentina"
+  },
+  {
+    "Affiliation": "Fermilab",
+    "field": "physics",
+    "times": 1,
+    "latitude": 41.8332022,
+    "longitude": -88.2653684,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Florida State University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 30.442216,
+    "longitude": -84.297453,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Florida State University",
+    "field": "physics",
+    "times": 1,
+    "latitude": 30.442216,
+    "longitude": -84.297453,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Forschungszentrum Julich",
+    "field": "physics",
+    "times": 1,
+    "latitude": 50.9054008,
+    "longitude": 6.4118689,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Fox Chase Cancer Center",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 40.0712706,
+    "longitude": -75.0909805,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Fred Hutchinson Cancer Research Center",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 47.6277525,
+    "longitude": -122.330673,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "French Academy Of Sciences",
+    "field": "physics",
+    "times": 1,
+    "latitude": 48.8572,
+    "longitude": 2.3367,
+    "country": "France"
+  },
+  {
+    "Affiliation": "French Institute Of Health And Medical Research",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 48.8286,
+    "longitude": 2.3642,
+    "country": "France"
+  },
+  {
+    "Affiliation": "General Electric",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 41.0195211,
+    "longitude": -75.1951162,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "General Electric",
+    "field": "physics",
+    "times": 4,
+    "latitude": 41.0195211,
+    "longitude": -75.1951162,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "German Cancer Research Center",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 49.414,
+    "longitude": 8.6724,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Goddard Space Flight Center",
+    "field": "physics",
+    "times": 1,
+    "latitude": 38.9998312,
+    "longitude": -76.8458613,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Guy S Hospital",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 51.5032099,
+    "longitude": -0.0867273,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Harvard University",
+    "field": "chemistry",
+    "times": 10,
+    "latitude": 42.3657432,
+    "longitude": -71.1222139,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Harvard University",
+    "field": "medicine",
+    "times": 15,
+    "latitude": 42.3657432,
+    "longitude": -71.1222139,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Harvard University",
+    "field": "physics",
+    "times": 7,
+    "latitude": 42.3657432,
+    "longitude": -71.1222139,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Heidelberg University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 49.4186002,
+    "longitude": 8.6692402,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Hoffmann La Roche",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 47.5590542,
+    "longitude": 7.6080324,
+    "country": "Switzerland"
+  },
+  {
+    "Affiliation": "Hokkaido University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 43.0790078,
+    "longitude": 141.3377295,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "Howard Hughes Medical Institute",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 38.9984789,
+    "longitude": -77.0795529,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Howard Hughes Medical Institute",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 38.9984789,
+    "longitude": -77.0795529,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Ibm",
+    "field": "physics",
+    "times": 4,
+    "latitude": 48.7183588,
+    "longitude": 21.2643753,
+    "country": "Slovakia"
+  },
+  {
+    "Affiliation": "Imperial Chemical Industries",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 54.5976582,
+    "longitude": -1.2955117,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Imperial College London",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 51.4989595,
+    "longitude": -0.1756407,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Indian Institute Of Science",
+    "field": "physics",
+    "times": 1,
+    "latitude": 13.0222347,
+    "longitude": 77.5671832,
+    "country": "India"
+  },
+  {
+    "Affiliation": "Indiana University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 39.1802358,
+    "longitude": -86.5093526,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Institut Francais",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 43.3413488,
+    "longitude": 17.8037576,
+    "country": "Bosnia and Herzegovina"
+  },
+  {
+    "Affiliation": "Institute For Advanced Study",
+    "field": "physics",
+    "times": 2,
+    "latitude": 40.3322547,
+    "longitude": -74.6657877,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Institute Of Biophysics",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 52.2070703,
+    "longitude": 20.9794412,
+    "country": "Poland"
+  },
+  {
+    "Affiliation": "Instituto De Biologia Y Medicina Experimental",
+    "field": "medicine",
+    "times": 1,
+    "latitude": -34.5579167,
+    "longitude": -58.4588242,
+    "country": "Argentina"
+  },
+  {
+    "Affiliation": "J Craig Venter Institute",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 32.8690247,
+    "longitude": -117.2433633,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Johns Hopkins University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 39.3302022,
+    "longitude": -76.6218536,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Johns Hopkins University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 39.3302022,
+    "longitude": -76.6218536,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Kettering University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 43.0140422,
+    "longitude": -83.7140044,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "King S College London",
+    "field": "physics",
+    "times": 1,
+    "latitude": 51.5030855,
+    "longitude": -0.0900021,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Kyoto University",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 35.0229299,
+    "longitude": 135.777149,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "Kyoto University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 35.0229299,
+    "longitude": 135.777149,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "Kyoto University",
+    "field": "physics",
+    "times": 4,
+    "latitude": 35.0229299,
+    "longitude": 135.777149,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "Laboratory Of Molecular Biology",
+    "field": "chemistry",
+    "times": 7,
+    "latitude": 2.9128513,
+    "longitude": 101.7881493,
+    "country": "Malaysia"
+  },
+  {
+    "Affiliation": "Laboratory Of Molecular Biology",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 2.9128513,
+    "longitude": 101.7881493,
+    "country": "Malaysia"
+  },
+  {
+    "Affiliation": "Lancaster University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 54.0098429,
+    "longitude": -2.7875768,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Lawrence Berkeley National Laboratory",
+    "field": "physics",
+    "times": 1,
+    "latitude": 37.8769588,
+    "longitude": -122.2456303,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Lister Institute Of Preventive Medicine",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 51.4847,
+    "longitude": -0.15,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Lund University",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 55.7126504,
+    "longitude": 13.2107587,
+    "country": "Sweden"
+  },
+  {
+    "Affiliation": "Marine Biological Laboratory",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 41.5256249,
+    "longitude": -70.6723967,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Massachusetts Institute Of Technology",
+    "field": "chemistry",
+    "times": 3,
+    "latitude": 42.3582529,
+    "longitude": -71.0966272,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Massachusetts Institute Of Technology",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 42.3582529,
+    "longitude": -71.0966272,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Massachusetts Institute Of Technology",
+    "field": "physics",
+    "times": 12,
+    "latitude": 42.3582529,
+    "longitude": -71.0966272,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Max Planck Society",
+    "field": "chemistry",
+    "times": 10,
+    "latitude": 50.0934673,
+    "longitude": 8.6513598,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Max Planck Society",
+    "field": "medicine",
+    "times": 6,
+    "latitude": 50.0934673,
+    "longitude": 8.6513598,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Max Planck Society",
+    "field": "physics",
+    "times": 4,
+    "latitude": 50.0934673,
+    "longitude": 8.6513598,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Mayo Clinic",
+    "field": "medicine",
+    "times": 1,
+    "latitude": -26.1505617,
+    "longitude": 27.9197318,
+    "country": "South Africa"
+  },
+  {
+    "Affiliation": "Medical Research Council",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 13.4739337,
+    "longitude": -16.6884473,
+    "country": "The Gambia"
+  },
+  {
+    "Affiliation": "Medical Research Council",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 13.4739337,
+    "longitude": -16.6884473,
+    "country": "The Gambia"
+  },
+  {
+    "Affiliation": "Meijo University",
+    "field": "physics",
+    "times": 1,
+    "latitude": 35.1353839,
+    "longitude": 136.9761343,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "Nagoya University",
+    "field": "physics",
+    "times": 1,
+    "latitude": 35.1533086,
+    "longitude": 136.9677806,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "National Institute For Medical Research",
+    "field": "medicine",
+    "times": 1,
+    "latitude": -6.8118955,
+    "longitude": 39.2973463,
+    "country": "Tanzania"
+  },
+  {
+    "Affiliation": "National Institute Of Standards And Technology",
+    "field": "physics",
+    "times": 4,
+    "latitude": 39.1316116,
+    "longitude": -77.2165406,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "National Institutes Of Health",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 39.0000142,
+    "longitude": -77.1040039,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "National Institutes Of Health",
+    "field": "medicine",
+    "times": 11,
+    "latitude": 39.0000142,
+    "longitude": -77.1040039,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "National Research Council",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 45.4426876,
+    "longitude": -75.618285,
+    "country": "Canada"
+  },
+  {
+    "Affiliation": "New England Biolabs",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 42.6502215,
+    "longitude": -70.8335206,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Niels Bohr Institute",
+    "field": "physics",
+    "times": 2,
+    "latitude": 55.6970455,
+    "longitude": 12.5715974,
+    "country": "Denmark"
+  },
+  {
+    "Affiliation": "Northwestern University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 42.0557157,
+    "longitude": -87.6752945,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Norwegian University Of Science And Technology",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 63.4480238,
+    "longitude": 10.4536394,
+    "country": "Norway"
+  },
+  {
+    "Affiliation": "Ohio State University",
+    "field": "physics",
+    "times": 2,
+    "latitude": 40.0056802,
+    "longitude": -83.0286612,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Pasteur Institute",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 25.5850554,
+    "longitude": 91.8841035,
+    "country": "India"
+  },
+  {
+    "Affiliation": "Picower Institute For Learning And Memory",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 42.3623061,
+    "longitude": -71.0912936,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Polytechnic University Of Milan",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 45.4798585,
+    "longitude": 9.2282438,
+    "country": "Italy"
+  },
+  {
+    "Affiliation": "Princeton University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 40.3386752,
+    "longitude": -74.6583655,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Princeton University",
+    "field": "physics",
+    "times": 6,
+    "latitude": 40.3386752,
+    "longitude": -74.6583655,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Queen S University",
+    "field": "physics",
+    "times": 1,
+    "latitude": 54.5847533,
+    "longitude": -5.936566,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Rice University",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 29.7167915,
+    "longitude": -95.4047811,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Rockefeller University",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 40.7624395,
+    "longitude": -73.9557565,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Rockefeller University",
+    "field": "medicine",
+    "times": 17,
+    "latitude": 40.7624395,
+    "longitude": -73.9557565,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Russian Academy Of Sciences",
+    "field": "physics",
+    "times": 2,
+    "latitude": 55.7108089,
+    "longitude": 37.5789699,
+    "country": "Russia"
+  },
+  {
+    "Affiliation": "Rutgers University",
+    "field": "medicine",
+    "times": 3,
+    "latitude": 40.5204169,
+    "longitude": -74.4645303,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Salk Institute For Biological Studies",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 32.8876113,
+    "longitude": -117.2453457,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Scripps Research Institute",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 32.8984967,
+    "longitude": -117.2428803,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "St Bartholomew S Hospital",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 51.5175315,
+    "longitude": -0.0998302,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Stanford University",
+    "field": "chemistry",
+    "times": 8,
+    "latitude": 37.4313138,
+    "longitude": -122.1693654,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Stanford University",
+    "field": "medicine",
+    "times": 5,
+    "latitude": 37.4313138,
+    "longitude": -122.1693654,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Stanford University",
+    "field": "physics",
+    "times": 12,
+    "latitude": 37.4313138,
+    "longitude": -122.1693654,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Suny Downstate Medical Center",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 40.6542908,
+    "longitude": -73.9455898,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Technion Israel Institute Of Technology",
+    "field": "chemistry",
+    "times": 5,
+    "latitude": 32.7768128,
+    "longitude": 35.0225446,
+    "country": "Israel"
+  },
+  {
+    "Affiliation": "Technische Hochschule",
+    "field": "chemistry",
+    "times": 3,
+    "latitude": 51.4880422,
+    "longitude": 7.2122953,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "Texas A M University",
+    "field": "physics",
+    "times": 2,
+    "latitude": 30.6108618,
+    "longitude": -96.3520606,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Texas Instruments",
+    "field": "physics",
+    "times": 1,
+    "latitude": 32.9301854,
+    "longitude": -96.7519165,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Tokyo Institute Of Technology",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 35.6050381,
+    "longitude": 139.6827407,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "Tufts University",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 42.4064913,
+    "longitude": -71.1180073,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Tulane University",
+    "field": "medicine",
+    "times": 3,
+    "latitude": 29.9412195,
+    "longitude": -90.1201009,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "United States Department Of Agriculture",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 38.8878412,
+    "longitude": -77.029994,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "United States Department Of Veterans Affairs",
+    "field": "medicine",
+    "times": 4,
+    "latitude": 38.9007688,
+    "longitude": -77.03521,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University College London",
+    "field": "medicine",
+    "times": 9,
+    "latitude": 51.524203,
+    "longitude": -0.1330007,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Birmingham",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 52.4522956,
+    "longitude": -1.9312857,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Bristol",
+    "field": "physics",
+    "times": 1,
+    "latitude": 51.4905582,
+    "longitude": -2.6304825,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of California Berkeley",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 37.8754996,
+    "longitude": -122.2390685,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Berkeley",
+    "field": "physics",
+    "times": 7,
+    "latitude": 37.8754996,
+    "longitude": -122.2390685,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Irvine",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 33.6429469,
+    "longitude": -117.8401606,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Irvine",
+    "field": "physics",
+    "times": 1,
+    "latitude": 33.6429469,
+    "longitude": -117.8401606,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Los Angeles",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 34.0708777,
+    "longitude": -118.4468503,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Los Angeles",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 34.0708777,
+    "longitude": -118.4468503,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Los Angeles",
+    "field": "physics",
+    "times": 2,
+    "latitude": 34.0708777,
+    "longitude": -118.4468503,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California San Diego",
+    "field": "chemistry",
+    "times": 7,
+    "latitude": 32.8792438,
+    "longitude": -117.2311247,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California San Francisco",
+    "field": "medicine",
+    "times": 3,
+    "latitude": 37.7627257,
+    "longitude": -122.4582568,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Santa Barbara",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 34.4146025,
+    "longitude": -119.84581,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of California Santa Barbara",
+    "field": "physics",
+    "times": 2,
+    "latitude": 34.4146025,
+    "longitude": -119.84581,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Cambridge",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 52.1890916,
+    "longitude": 0.1212977,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Cambridge",
+    "field": "medicine",
+    "times": 5,
+    "latitude": 52.1890916,
+    "longitude": 0.1212977,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Cambridge",
+    "field": "physics",
+    "times": 6,
+    "latitude": 52.1890916,
+    "longitude": 0.1212977,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Chicago",
+    "field": "physics",
+    "times": 9,
+    "latitude": 41.7913968,
+    "longitude": -87.6008439,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Colorado Boulder",
+    "field": "physics",
+    "times": 2,
+    "latitude": 40.0069373,
+    "longitude": -105.2663866,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Copenhagen",
+    "field": "physics",
+    "times": 1,
+    "latitude": 55.6801502,
+    "longitude": 12.572327,
+    "country": "Denmark"
+  },
+  {
+    "Affiliation": "University Of Edinburgh",
+    "field": "physics",
+    "times": 4,
+    "latitude": 55.9440764,
+    "longitude": -3.1883736,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Geneva",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 41.7994022,
+    "longitude": -80.9614527,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Glasgow",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 1.3076892,
+    "longitude": 103.7780353,
+    "country": "Singapore"
+  },
+  {
+    "Affiliation": "University Of Gothenburg",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 57.6985465,
+    "longitude": 11.9712422,
+    "country": "Sweden"
+  },
+  {
+    "Affiliation": "University Of Hamburg",
+    "field": "physics",
+    "times": 2,
+    "latitude": 53.564106,
+    "longitude": 9.9949809,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "University Of Illinois At Urbana Champaign",
+    "field": "physics",
+    "times": 7,
+    "latitude": 40.0906292,
+    "longitude": -88.176418,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Leeds",
+    "field": "physics",
+    "times": 1,
+    "latitude": 53.8057925,
+    "longitude": -1.555111,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Manchester",
+    "field": "physics",
+    "times": 2,
+    "latitude": 53.4660226,
+    "longitude": -2.2330858,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Massachusetts Medical School",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 42.2782955,
+    "longitude": -71.7622355,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Melbourne",
+    "field": "medicine",
+    "times": 2,
+    "latitude": -37.8241371,
+    "longitude": 144.9170886,
+    "country": "Australia"
+  },
+  {
+    "Affiliation": "University Of Michigan",
+    "field": "physics",
+    "times": 1,
+    "latitude": 42.2942142,
+    "longitude": -83.7100389,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Minnesota",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 44.9863392,
+    "longitude": -93.1794558,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of North Carolina At Chapel Hill",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 35.9050353,
+    "longitude": -79.0477533,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of North Carolina At Chapel Hill",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 35.9050353,
+    "longitude": -79.0477533,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Nottingham",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 52.9387428,
+    "longitude": -1.2002957,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Oxford",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 51.7587075,
+    "longitude": -1.2556685,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Oxford",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 51.7587075,
+    "longitude": -1.2556685,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Oxford",
+    "field": "physics",
+    "times": 1,
+    "latitude": 51.7587075,
+    "longitude": -1.2556685,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Pennsylvania",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 39.9503945,
+    "longitude": -75.1946713,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Rochester",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 43.129864,
+    "longitude": -77.628784,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Southern California",
+    "field": "chemistry",
+    "times": 3,
+    "latitude": 34.0218689,
+    "longitude": -118.2858579,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Southern California",
+    "field": "physics",
+    "times": 1,
+    "latitude": 34.0218689,
+    "longitude": -118.2858579,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of St Andrews",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 56.3398198,
+    "longitude": -2.8117937,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "University Of Texas At Austin",
+    "field": "physics",
+    "times": 1,
+    "latitude": 30.2851494,
+    "longitude": -97.7339352,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Texas Health Science Center At Houston",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 29.703,
+    "longitude": -95.399,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Texas Southwestern Medical Center",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 32.812043,
+    "longitude": -96.8417201,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Texas Southwestern Medical Center",
+    "field": "medicine",
+    "times": 3,
+    "latitude": 32.812043,
+    "longitude": -96.8417201,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Tokyo",
+    "field": "physics",
+    "times": 3,
+    "latitude": 35.7117157,
+    "longitude": 139.7637457,
+    "country": "Japan"
+  },
+  {
+    "Affiliation": "University Of Toronto",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 43.663462,
+    "longitude": -79.3977597,
+    "country": "Canada"
+  },
+  {
+    "Affiliation": "University Of Tubingen",
+    "field": "chemistry",
+    "times": 2,
+    "latitude": 48.5340595,
+    "longitude": 9.0712444,
+    "country": "Germany"
+  },
+  {
+    "Affiliation": "University Of Utah",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 40.7628137,
+    "longitude": -111.8368719,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Washington",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 47.6554303,
+    "longitude": -122.3001692,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Washington",
+    "field": "physics",
+    "times": 3,
+    "latitude": 47.6554303,
+    "longitude": -122.3001692,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Wisconsin Madison",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 43.0802745,
+    "longitude": -89.4309587,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "University Of Zurich",
+    "field": "medicine",
+    "times": 2,
+    "latitude": 47.4968435,
+    "longitude": 8.7298072,
+    "country": "Switzerland"
+  },
+  {
+    "Affiliation": "Utrecht University",
+    "field": "physics",
+    "times": 1,
+    "latitude": 52.0832758,
+    "longitude": 5.1478185,
+    "country": "Netherlands"
+  },
+  {
+    "Affiliation": "Vanderbilt University",
+    "field": "medicine",
+    "times": 4,
+    "latitude": 36.1438011,
+    "longitude": -86.8028189,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Virginia Commonwealth University",
+    "field": "chemistry",
+    "times": 1,
+    "latitude": 37.5461246,
+    "longitude": -77.4540609,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Walter And Eliza Hall Institute Of Medical Research",
+    "field": "medicine",
+    "times": 1,
+    "latitude": -37.798,
+    "longitude": 144.957,
+    "country": "Australia"
+  },
+  {
+    "Affiliation": "Washington University In St Louis",
+    "field": "medicine",
+    "times": 9,
+    "latitude": 38.6472402,
+    "longitude": -90.3084017,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Wellcome Trust",
+    "field": "medicine",
+    "times": 1,
+    "latitude": 51.5255433,
+    "longitude": -0.1348864,
+    "country": "United Kingdom"
+  },
+  {
+    "Affiliation": "Wilmington University",
+    "field": "chemistry",
+    "times": 4,
+    "latitude": 39.6821331,
+    "longitude": -75.5869978,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Yale University",
+    "field": "chemistry",
+    "times": 5,
+    "latitude": 41.2571305,
+    "longitude": -72.9896696,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Yale University",
+    "field": "medicine",
+    "times": 4,
+    "latitude": 41.2571305,
+    "longitude": -72.9896696,
+    "country": "United States"
+  },
+  {
+    "Affiliation": "Yale University",
+    "field": "physics",
+    "times": 1,
+    "latitude": 41.2571305,
+    "longitude": -72.9896696,
+    "country": "United States"
+  }
+]
