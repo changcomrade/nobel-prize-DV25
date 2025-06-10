@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>诺奖协作网络</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { 
+            margin: 0; 
+            height: 100vh; 
+            background: #000;
+            color: #ffffff;
+            font-family: 'Microsoft YaHei', '微软雅黑', 'Heiti SC', '黑体', Arial, sans-serif;
+        }
+        #network { width: 100%; height: 100%; }
+        .node { stroke: #ffffff; stroke-width: 1.5px; }
+        .node:hover { cursor: pointer; }
+        .link { stroke: #ffffff; stroke-opacity: 0.6; }
+        .controls {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border: none;
+            border-radius: 8px;
+            color: #ffcc00;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-width: 150px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Microsoft YaHei', '微软雅黑', 'Heiti SC', '黑体', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .legend-item.selected {
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+        .legend-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+        .legend-label {
+            color: #ffffff;
+            text-shadow: 0 0 3px rgba(255, 204, 0, 0.5);
+        }
+        button {
+            margin-right: 5px;
+            padding: 10px 20px;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Microsoft YaHei', '微软雅黑', 'Heiti SC', '黑体', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+        button:hover { 
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+        #physics { color: #00ccff; border-color: #00ccff; }
+        #chemistry { color: #ffcc00; border-color: #ffcc00; }
+        #medicine { color: #ff6666; border-color: #ff6666; }
+        #all { color: #ffffff; border-color: #ffffff; }
+        #reset { 
+            color: #ffffff; 
+            border-color: #ffffff;
+            margin-top: 10px;
+        }
+        
+        .tooltip {
+            position: absolute;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffcc00;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 20;
+            font-family: 'Times New Roman', '微软雅黑', 'Microsoft YaHei', Times, serif;
+            font-size: 12px;
+            max-width: 200px;
+        }
+        .tooltip-author {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 22px;
+            font-style: italic;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .tooltip-info {
+            font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+            font-size: 16px;
+            color: #fff8dc;
+            line-height: 1.7;
+        }
+        
+        .node.highlight {
+            stroke: #ffcc00;
+            stroke-width: 3px;
+        }
+        
+        .node.faded {
+            opacity: 0.2;
+        }
+        
+        .link.faded {
+            opacity: 0.1;
+            stroke-width: 0.5px !important;
+        }
+        
+        .link.highlight {
+            stroke: #ffcc00;
+            stroke-opacity: 1;
+        }
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .filter-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .discipline-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .discipline-btn {
+            padding: 10px 18px;
+            background: rgba(255,255,255,0.08);
+            border: 2px solid transparent;
+            border-radius: 30px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .discipline-btn i {
+            font-size: 1.1rem;
+        }
+        .discipline-btn[data-discipline="physics"] {
+            border-color: #00ccff;
+        }
+        .discipline-btn[data-discipline="chemistry"] {
+            border-color: #ffcc00;
+        }
+        .discipline-btn[data-discipline="medicine"] {
+            border-color: #ff6666;
+        }
+        .discipline-btn.active {
+            background: #222;
+            color: #ffcc00;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        .discipline-btn:hover {
+            background: #111;
+        }
+        .corner-menu {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 9999;
+            font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+            user-select: none;
+        }
+        .corner-menu-toggle {
+            width: 38px;
+            height: 38px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffcc00;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+        }
+        .corner-menu-toggle:hover {
+            background: rgba(0,0,0,0.9);
+        }
+        .corner-menu-list {
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(20px) scale(0.98);
+            transition: opacity 0.35s cubic-bezier(.4,2,.6,1), transform 0.35s cubic-bezier(.4,2,.6,1);
+            margin-top: 10px;
+            background: rgba(0,0,0,0.85);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            padding: 6px 10px;
+            min-width: 120px;
+        }
+        .corner-menu:hover .corner-menu-list,
+        .corner-menu:focus-within .corner-menu-list {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
+        }
+        .corner-menu-list a {
+            color: #ffcc00;
+            font-size: 15px;
+            font-family: 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+            text-decoration: none;
+            margin: 6px 0;
+            transition: color 0.2s, background 0.2s, transform 0.2s;
+            border-radius: 6px;
+            padding: 4px 8px;
+            display: block;
+            transform: scale(1);
+        }
+        .corner-menu-list a:hover {
+            background: rgba(255, 204, 0, 0.13);
+            color: #fff;
+            transform: scale(1.08);
+            box-shadow: 0 2px 8px rgba(255,204,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <div class="filter-group">
+            <div class="filter-title"><i class="fas fa-atom"></i> 选择学科</div>
+            <div class="discipline-filters">
+                <button class="discipline-btn active" data-discipline="physics"><i class="fas fa-rocket"></i> 物理学</button>
+                <button class="discipline-btn active" data-discipline="chemistry"><i class="fas fa-flask"></i> 化学</button>
+                <button class="discipline-btn active" data-discipline="medicine"><i class="fas fa-heartbeat"></i> 医学</button>
+            </div>
+            <button class="discipline-btn" id="reset"><i class="fas fa-undo"></i> 一键恢复</button>
+        </div>
+    </div>
+    <div id="network"></div>
+    <div id="tooltip" class="tooltip" style="display: none;"></div>
+    <!-- 页面切换菜单 -->
+    <div class="corner-menu">
+        <div class="corner-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="corner-menu-list">
+            <a href="index.html">诺奖的全球版图</a>
+            <a href="scientist.html">科学家的成就之路</a>
+            <a href="KeywordCloud.html">科学的关键词脉络</a>
+            <a href="colabration.html">诺奖协作网络</a>
+            <a href="NobelIntegers.html">诺奖的多元格局</a>
+        </div>
+    </div>
+    <script>
+        d3.json("data/cleaned_nobel_collaboration_network.json").then(data => {
+            const width = window.innerWidth, height = 900;
+            const svg = d3.select("#network").append("svg")
+                .attr("width", width).attr("height", height);
+            
+            const color = d3.scaleOrdinal()
+                .domain(["Physics", "Chemistry", "Medicine"])
+                .range(["#00ccff", "#ffcc00", "#ff6666"]);
+            
+            // 深度复制原始数据
+            const originalNodes = JSON.parse(JSON.stringify(data.nodes));
+            const originalLinks = JSON.parse(JSON.stringify(data.links));
+            
+            // 处理节点数据，确保每个节点有唯一ID
+            originalNodes.forEach((node, idx) => {
+                if (!node.id) node.id = idx;
+            });
+            
+            // 处理链接数据，将source/target转换为节点ID引用
+            originalLinks.forEach(link => {
+                if (typeof link.source !== 'string' && typeof link.source !== 'number') {
+                    link.source = link.source.id || link.source;
+                }
+                if (typeof link.target !== 'string' && typeof link.target !== 'number') {
+                    link.target = link.target.id || link.target;
+                }
+            });
+            
+            // 过滤合作次数为0的节点
+            const filteredNodes = originalNodes.filter(node => (node.collab_count || 0) > 0);
+            
+            // 创建节点ID到节点对象的映射
+            const nodeMap = new Map();
+            filteredNodes.forEach(node => nodeMap.set(node.id, node));
+            
+            // 过滤链接：只保留两端节点都存在的链接
+            const filteredLinks = originalLinks.filter(link => {
+                return nodeMap.has(link.source) && nodeMap.has(link.target);
+            });
+            
+            // 为过滤后的链接重新绑定节点对象
+            filteredLinks.forEach(link => {
+                link.source = nodeMap.get(link.source);
+                link.target = nodeMap.get(link.target);
+            });
+            
+            console.log("过滤后节点数:", filteredNodes.length);
+            console.log("过滤后链接数:", filteredLinks.length);
+            
+            const simulation = d3.forceSimulation(filteredNodes)
+                .force("link", d3.forceLink(filteredLinks)
+                    .id(d => d.id)
+                    .distance(100)
+                    .strength(0.2)
+                )
+                .force("charge", d3.forceManyBody().strength(-50))
+                .force("center", d3.forceCenter(width/2, height/2))
+                .force("collide", d3.forceCollide().radius(15))
+                .force("x", d3.forceX(width/2).strength(0.05))
+                .force("y", d3.forceY(height/2).strength(0.05))
+                .velocityDecay(0.3);
+            
+            // 添加圆形边界约束
+            simulation.on("tick", () => {
+                const radius = Math.min(width, height) * 0.45;
+                const centerX = width/2;
+                const centerY = height/2;
+
+                filteredNodes.forEach(node => {
+                    const dx = node.x - centerX;
+                    const dy = node.y - centerY;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance > radius) {
+                        const angle = Math.atan2(dy, dx);
+                        node.x = centerX + radius * Math.cos(angle);
+                        node.y = centerY + radius * Math.sin(angle);
+                    }
+                });
+
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+                
+                node
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+            });
+            
+            const zoomG = svg.append("g");
+            
+            const link = zoomG.selectAll("line")
+                .data(filteredLinks)
+                .enter().append("line")
+                .attr("class", "link")
+                .attr("stroke-width", d => Math.max(0.5, Math.sqrt(d.weight || 1)));
+            
+            const node = zoomG.selectAll("circle")
+                .data(filteredNodes)
+                .enter().append("circle")
+                .attr("class", "node")
+                .attr("r", 10)
+                .attr("fill", d => color(d.field || "gray"));
+            
+            node.call(d3.drag()
+                .on("start", (event, d) => {
+                    if (!event.active) simulation.alphaTarget(0.3).restart();
+                    d.fx = d.x;
+                    d.fy = d.y;
+                })
+                .on("drag", (event, d) => {
+                    d.fx = event.x;
+                    d.fy = event.y;
+                })
+                .on("end", (event, d) => {
+                    if (!event.active) simulation.alphaTarget(0);
+                    d.fx = null;
+                    d.fy = null;
+                })
+            );
+            
+            const zoom = d3.zoom()
+                .scaleExtent([0.5, 5])
+                .on("zoom", (event) => {
+                    zoomG.attr("transform", event.transform);
+                });
+            svg.call(zoom);
+            
+            const initialPositions = new Map();
+            filteredNodes.forEach(node => {
+                initialPositions.set(node.id, {x: node.x, y: node.y});
+            });
+            
+            // 存储当前选中的领域
+            let selectedFields = ['physics', 'chemistry', 'medicine'];
+            
+            function filterField(field) {
+                // 切换单个领域的选中状态
+                const index = selectedFields.indexOf(field);
+                if (index === -1) {
+                    selectedFields.push(field);
+                } else {
+                    selectedFields.splice(index, 1);
+                }
+                d3.select(`.discipline-btn[data-discipline="${field}"]`).classed('active', index === -1);
+                
+                // 过滤节点和链接
+                const visibleNodeIds = new Set(
+                    filteredNodes
+                        .filter(n => selectedFields.includes(n.field.toLowerCase()))
+                        .map(n => n.id)
+                );
+                
+                node.attr("visibility", d => visibleNodeIds.has(d.id) ? "visible" : "hidden");
+                link.attr("visibility", l => 
+                    visibleNodeIds.has(l.source.id) && visibleNodeIds.has(l.target.id) ? "visible" : "hidden"
+                );
+            }
+
+            function resetLayout() {
+                // 重置选中状态
+                selectedFields = ['physics', 'chemistry', 'medicine'];
+                d3.selectAll('.discipline-btn').classed('active', true);
+                
+                // 显示所有节点
+                node.attr("visibility", "visible");
+                link.attr("visibility", "visible");
+                
+                // 重置所有样式
+                node.classed("faded", false);
+                link.classed("faded", false);
+                node.classed("highlight", false);
+                link.classed("highlight", false);
+                
+                // 重置节点位置
+                filteredNodes.forEach(node => {
+                    const pos = initialPositions.get(node.id);
+                    if (pos) {
+                        node.x = pos.x;
+                        node.y = pos.y;
+                    }
+                });
+                
+                // 重置缩放
+                svg.transition().duration(750).call(
+                    zoom.transform,
+                    d3.zoomIdentity
+                );
+                
+                simulation.alpha(1).restart();
+            }
+            
+            // 为每个legend-item添加点击事件
+            d3.selectAll('.discipline-btn').on('click', function() {
+                const field = d3.select(this).attr('data-discipline');
+                filterField(field);
+            });
+
+            // 为一键恢复添加点击事件
+            d3.select('#reset').on('click', resetLayout);
+            
+            // 初始化显示所有节点
+            selectedFields = ['physics', 'chemistry', 'medicine'];
+            d3.selectAll('.discipline-btn').classed('active', true);
+            node.attr("visibility", "visible");
+            link.attr("visibility", "visible");
+            
+            simulation.restart();
+            
+            const tooltip = d3.select("#tooltip");
+            
+            // 创建邻接表，快速查找与某个节点相连的所有节点
+            const neighbors = new Map();
+            filteredNodes.forEach(node => neighbors.set(node.id, new Set()));
+            filteredLinks.forEach(link => {
+                neighbors.get(link.source.id).add(link.target.id);
+                neighbors.get(link.target.id).add(link.source.id);
+            });
+            
+            node.on("mouseover", (event, d) => {
+                // 获取当前节点的所有邻居节点ID
+                const neighborIds = neighbors.get(d.id);
+                
+                // 重置所有样式
+                node.classed("faded", false);
+                link.classed("faded", false);
+                node.classed("highlight", false);
+                link.classed("highlight", false);
+                
+                // 高亮当前节点
+                d3.select(event.currentTarget).classed("highlight", true);
+                
+                // 高亮与当前节点相连的链接
+                link.classed("highlight", l => 
+                    l.source.id === d.id || l.target.id === d.id
+                );
+                
+                // 高亮与当前节点相连的节点
+                node.classed("highlight", n => 
+                    n.id !== d.id && neighborIds.has(n.id)
+                );
+                
+                // 淡化其他节点和链接
+                node.classed("faded", n => 
+                    n.id !== d.id && !neighborIds.has(n.id)
+                );
+                
+                link.classed("faded", l => 
+                    l.source.id !== d.id && !neighborIds.has(l.source.id) &&
+                    l.target.id !== d.id && !neighborIds.has(l.target.id)
+                );
+                
+                tooltip.style("display", null)
+                    .html(`
+                        <span class="tooltip-author">${d.name}</span>
+                        <div class="tooltip-info">
+                        领域: ${d.field || "未知"}<br>
+                        获奖年份: ${d.prize_year || "未知"}<br>
+                        合作人数: ${d.collab_count || "0"}
+                        </div>
+                    `)
+                    .style("left", (event.pageX + 15) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mousemove", (event) => {
+                tooltip.style("left", (event.pageX + 15) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", () => {
+                // 恢复所有样式
+                node.classed("faded", false);
+                link.classed("faded", false);
+                node.classed("highlight", false);
+                link.classed("highlight", false);
+                tooltip.style("display", "none");
+            });
+            
+        }).catch(error => {
+            console.error("数据加载失败:", error);
+            alert("请检查JSON文件路径和格式");
+        });
+    </script>
+</body>
+</html>
